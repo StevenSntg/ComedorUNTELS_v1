@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:background="@color/md_background">
 
-    <!-- Header mejorado con gradiente -->
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="280dp"
@@ -35,7 +34,7 @@
                 app:layout_collapseMode="parallax"
                 app:layout_collapseParallaxMultiplier="0.7" />
 
-            <!-- Gradiente overlay mejorado -->
+            <!-- Gradiente overlay -->
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
