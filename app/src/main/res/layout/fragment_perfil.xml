@@ -64,7 +64,7 @@
                         android:id="@+id/tvNombreUsuario"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Brenda Salazar"
+                        android:text="Pablo Huacanjulca"
                         android:textColor="@android:color/white"
                         android:textSize="22sp"
                         android:textStyle="bold" />
@@ -74,7 +74,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
-                        android:text="Ing. Ambiental · CUI 202056789"
+                        android:text="Ing. de Sistemas · 2223110056"
                         android:textColor="@android:color/white"
                         android:textSize="13sp"
                         android:alpha="0.85" />
@@ -105,6 +105,7 @@
                     android:text="Editar"
                     android:textAllCaps="false"
                     android:textSize="13sp"
+                    android:textColor="@color/material_dynamic_primary100"
                     app:cornerRadius="16dp"
                     app:strokeColor="@android:color/white"
                     app:strokeWidth="1dp"
@@ -217,29 +218,6 @@
                                 android:textSize="24sp"
                                 android:textStyle="bold" />
                         </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Impacto sostenible"
-                                android:textColor="@color/md_on_surface_variant"
-                                android:textSize="12sp" />
-
-                            <TextView
-                                android:id="@+id/tvImpacto"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="+18"
-                                android:textColor="@color/md_tertiary"
-                                android:textSize="24sp"
-                                android:textStyle="bold" />
-                        </LinearLayout>
                     </LinearLayout>
 
                     <com.google.android.material.button.MaterialButton
@@ -250,7 +228,6 @@
                         android:text="Mostrar credencial QR"
                         android:textAllCaps="false"
                         android:textSize="14sp"
-                        style="@style/Widget.Material3.Button.FilledTonalButton"
                         app:cornerRadius="16dp"
                         app:icon="@drawable/ic_arrow_right"
                         app:iconTint="@color/md_primary" />
@@ -325,21 +302,21 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:checkable="true"
-                            android:text="🌶️ Picante moderado"
+                            android:text="🌶️ Picante"
                             style="@style/Widget.Material3.Chip.Filter" />
 
                         <com.google.android.material.chip.Chip
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:checkable="true"
-                            android:text="🌱 Plant-based"
+                            android:text="🌱 Vegetariano"
                             style="@style/Widget.Material3.Chip.Filter" />
 
                         <com.google.android.material.chip.Chip
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:checkable="true"
-                            android:text="🍓 Postres naturales"
+                            android:text="🍓 Postres dulces"
                             style="@style/Widget.Material3.Chip.Filter" />
                     </com.google.android.material.chip.ChipGroup>
 
@@ -351,7 +328,6 @@
                         android:text="Guardar cambios"
                         android:textAllCaps="false"
                         android:textSize="13sp"
-                        style="@style/Widget.Material3.Button.FilledButton"
                         app:cornerRadius="16dp"
                         app:icon="@drawable/ic_arrow_right"
                         app:iconTint="@color/md_on_primary" />
@@ -481,7 +457,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
-                            android:text="Recoge tu almuerzo antes de las 12:15 y completa tu reto de frutas de temporada."
+                            android:text="Asiste al comedor desde las 12:00 y completa tu reto de frutas de temporada."
                             android:textColor="@color/md_on_surface_variant"
                             android:textSize="13sp"
                             android:lineSpacingExtra="4dp" />

@@ -50,7 +50,7 @@
                     android:id="@+id/tvSemanaActual"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Semana 12 · 18 - 22 de Noviembre"
+                    android:text="Semana 4 · 15 - 19 de Noviembre"
                     android:textColor="@android:color/white"
                     android:textSize="26sp"
                     android:textStyle="bold" />
@@ -153,7 +153,6 @@
 
                         <com.google.android.material.button.MaterialButton
                             android:id="@+id/btnRecordatorioSemana"
-                            style="@style/Widget.Material3.Button.FilledTonalButton"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Programar recordatorio"
@@ -311,7 +310,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="2dp"
-                                android:text="18 Nov"
+                                android:text="15 Nov"
                                 android:textColor="@color/md_on_surface_variant"
                                 android:textSize="12sp" />
 
@@ -319,7 +318,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="12dp"
-                                android:text="Pescado al vapor con vegetales + Quinua tricolor"
+                                android:text="Pollo al horno con Lentejitas"
                                 android:textColor="@color/md_on_surface"
                                 android:textSize="14sp"
                                 android:lineSpacingExtra="2dp" />
@@ -398,7 +397,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="2dp"
-                                android:text="19 Nov"
+                                android:text="16 Nov"
                                 android:textColor="@color/md_on_surface_variant"
                                 android:textSize="12sp" />
 
@@ -406,7 +405,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="12dp"
-                                android:text="Lentejas al curry + Pollo grillado con ensalada fresca"
+                                android:text="Chuleta de cerdo con papa sancochada"
                                 android:textColor="@color/md_on_surface"
                                 android:textSize="14sp"
                                 android:lineSpacingExtra="2dp" />
@@ -418,7 +417,7 @@
                                 android:background="@drawable/tag_background"
                                 android:paddingHorizontal="8dp"
                                 android:paddingVertical="4dp"
-                                android:text="Veggie friendly"
+                                android:text="Especialidad de la casa"
                                 android:textColor="@color/md_on_surface"
                                 android:textSize="11sp"
                                 android:textStyle="bold" />
@@ -447,7 +446,6 @@
                                 android:text="Reservar"
                                 android:textAllCaps="false"
                                 android:textSize="13sp"
-                                style="@style/Widget.Material3.Button.FilledButton"
                                 app:cornerRadius="14dp"
                                 app:icon="@drawable/ic_flash"
                                 app:iconTint="@color/md_on_primary" />
@@ -483,7 +481,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="2dp"
-                                android:text="20 Nov"
+                                android:text="17 Nov"
                                 android:textColor="@color/md_on_surface_variant"
                                 android:textSize="12sp" />
 
@@ -491,7 +489,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="12dp"
-                                android:text="Crema de zapallo loche + Seco de res con frejoles"
+                                android:text="Chicharron de pescado con yuca frita"
                                 android:textColor="@color/md_on_surface"
                                 android:textSize="14sp"
                                 android:lineSpacingExtra="2dp" />
@@ -569,7 +567,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="2dp"
-                                android:text="21 Nov"
+                                android:text="18 Nov"
                                 android:textColor="@color/md_on_surface_variant"
                                 android:textSize="12sp" />
 
@@ -577,7 +575,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="12dp"
-                                android:text="Arroz chaufa integral + Ensalada de mango y pepino"
+                                android:text="Garbanzos a la española"
                                 android:textColor="@color/md_on_surface"
                                 android:textSize="14sp"
                                 android:lineSpacingExtra="2dp" />
@@ -652,7 +650,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="2dp"
-                                android:text="22 Nov"
+                                android:text="19 Nov"
                                 android:textColor="@color/md_on_surface_variant"
                                 android:textSize="12sp" />
 
@@ -660,7 +658,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="12dp"
-                                android:text="Causa limeña + Sudado de trucha andina"
+                                android:text="Asado de pavo con Pepian"
                                 android:textColor="@color/md_on_surface"
                                 android:textSize="14sp"
                                 android:lineSpacingExtra="2dp" />
@@ -854,7 +852,6 @@
                         android:text="Actualizar preferencias"
                         android:textAllCaps="false"
                         android:textSize="13sp"
-                        style="@style/Widget.Material3.Button.FilledTonalButton"
                         app:cornerRadius="16dp"
                         app:icon="@drawable/ic_arrow_right"
                         app:iconTint="@color/md_primary" />

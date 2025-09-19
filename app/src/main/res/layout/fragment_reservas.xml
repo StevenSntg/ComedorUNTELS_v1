@@ -31,7 +31,7 @@
                 android:paddingTop="24dp"
                 android:paddingHorizontal="20dp"
                 app:menu="@menu/menu_hoy"
-                app:title="Reservas inteligentes"
+                app:title="Chapa tu cupo!"
                 app:titleCentered="false"
                 app:titleTextColor="@android:color/white" />
 
@@ -47,7 +47,7 @@
                     android:id="@+id/tvResumenReservas"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Gestiona tus cupos sin estrés"
+                    android:text="Separa tus cupos sin estrés"
                     android:textColor="@android:color/white"
                     android:textSize="26sp"
                     android:textStyle="bold" />
@@ -56,7 +56,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
-                    android:text="Activa recordatorios automáticos, monitorea la demanda y asegura tu acceso al comedor."
+                    android:text="Activa recordatorios automáticos, y asegura tu cupo en el comedor."
                     android:textColor="@android:color/white"
                     android:textSize="15sp"
                     android:alpha="0.9" />
@@ -73,7 +73,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="🔔 Próximo aviso 11:55"
+                        android:text="🔔 Próximo aviso 10:30"
                         android:textColor="@android:color/white"
                         android:textSize="14sp" />
 
@@ -131,7 +131,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
-                        android:text="Hoy • 12:00 pm"
+                        android:text="Hoy • 10:30 am"
                         android:textColor="@color/md_on_surface_variant"
                         android:textSize="14sp" />
 
@@ -240,7 +240,6 @@
 
                         <com.google.android.material.button.MaterialButton
                             android:id="@+id/btnReservar"
-                            style="@style/Widget.Material3.Button.FilledButton"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -352,7 +351,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="2dp"
-                                android:text="Cupos asegurados · Recoger entre 12:00 y 13:00"
+                                android:text="Recoger entre 10:30 y 11:00"
                                 android:textColor="@color/md_on_surface_variant"
                                 android:textSize="13sp" />
 
@@ -653,7 +652,6 @@
                         android:text="Solicitar mentor nutricional"
                         android:textAllCaps="false"
                         android:textSize="13sp"
-                        style="@style/Widget.Material3.Button.FilledTonalButton"
                         app:cornerRadius="16dp"
                         app:icon="@drawable/ic_arrow_right"
                         app:iconTint="@color/md_primary" />
