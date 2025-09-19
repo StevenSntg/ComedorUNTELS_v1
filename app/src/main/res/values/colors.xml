@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="md_primary">#6366F1</color>
+    <color name="md_on_primary">#FFFFFF</color>
+    <color name="md_primary_container">#E0E7FF</color>
+    <color name="md_on_primary_container">#1E1B4B</color>
+
+    <color name="md_secondary">#EC4899</color>
+    <color name="md_on_secondary">#FFFFFF</color>
+    <color name="md_secondary_container">#FCE7F3</color>
+    <color name="md_on_secondary_container">#831843</color>
+
+    <color name="md_tertiary">#059669</color>
+    <color name="md_on_tertiary">#FFFFFF</color>
+    <color name="md_tertiary_container">#D1FAE5</color>
+    <color name="md_on_tertiary_container">#064E3B</color>
+
+    <color name="md_error">#EF4444</color>
+    <color name="md_on_error">#FFFFFF</color>
+    <color name="md_error_container">#FECACA</color>
+    <color name="md_on_error_container">#991B1B</color>
+
+    <color name="md_background">#FAFBFF</color>
+    <color name="md_on_background">#1A1C1E</color>
+    <color name="md_surface">#FFFFFF</color>
+    <color name="md_on_surface">#1A1C1E</color>
+    <color name="md_surface_variant">#F1F5F9</color>
+    <color name="md_on_surface_variant">#475569</color>
+
+    <color name="md_outline">#E2E8F0</color>
+    <color name="md_outline_variant">#F1F5F9</color>
+
+    <!-- Semantic Colors -->
+    <color name="success">#10B981</color>
+    <color name="warning">#F59E0B</color>
+    <color name="info">#3B82F6</color>
+
+    <!-- Gradient Colors -->
+    <color name="gradient_start">#6366F1</color>
+    <color name="gradient_end">#EC4899</color>
+
+    <!-- Food Category Colors -->
+    <color name="breakfast_color">#F59E0B</color>
+    <color name="lunch_color">#EF4444</color>
+    <color name="dinner_color">#8B5CF6</color>
+</resources>
