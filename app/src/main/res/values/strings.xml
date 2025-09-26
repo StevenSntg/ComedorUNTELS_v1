@@ -1,3 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">ComedorUNTELS</string>
+
+    <string name="login_title">Bienvenido al Comedor UNTELS</string>
+    <string name="login_tagline">Energía solar para tus ideas y tu alimentación.</string>
+    <string name="login_subtitle">Gestiona tus reservas y mantente conectado con la experiencia gastronómica de la UNTELS.</string>
+    <string name="login_helper">Ingresa con las credenciales asignadas por el equipo del comedor.</string>
+    <string name="login_demo_hint">Demo: estudiante / energia2024</string>
+    <string name="login_user_hint">Usuario UNTELS</string>
+    <string name="login_password_hint">Contraseña</string>
+    <string name="login_button">Ingresar</string>
+    <string name="login_error_required">Este campo es obligatorio</string>
+    <string name="login_error_invalid">Usuario o contraseña incorrectos</string>
+
+    <string name="profile_logout">Cerrar sesión</string>
+    <string name="profile_logout_message">Tu sesión se cerró correctamente.</string>
 </resources>
