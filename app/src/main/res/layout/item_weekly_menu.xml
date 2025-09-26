@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    app:cardBackgroundColor="@color/md_surface"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvDayName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/md_primary"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:text="Lunes" />
+
+        <TextView
+            android:id="@+id/tvHighlight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/md_on_surface"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="Inicio con energía" />
+
+        <TextView
+            android:id="@+id/tvMainCourse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/md_on_surface"
+            android:textSize="14sp"
+            tools:text="Seco de res con frijoles y arroz" />
+
+        <TextView
+            android:id="@+id/tvSoup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:textColor="@color/md_on_surface_variant"
+            android:textSize="12sp"
+            tools:text="Entrada: Crema de zapallo" />
+
+        <TextView
+            android:id="@+id/tvDessert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/md_on_surface_variant"
+            android:textSize="12sp"
+            tools:text="Postre: Ensalada de frutas" />
+
+        <TextView
+            android:id="@+id/tvBeverage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/md_on_surface_variant"
+            android:textSize="12sp"
+            tools:text="Bebida: Emoliente de quinua" />
+
+        <TextView
+            android:id="@+id/tvCalories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/md_on_surface_variant"
+            android:textSize="12sp"
+            tools:text="850 kcal" />
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

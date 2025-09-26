@@ -2,49 +2,52 @@
 <resources>
     <string name="app_name">ComedorUNTELS</string>
 
-    <string name="login_title">Bienvenido al Comedor UNTELS</string>
-    <string name="login_tagline">Sabores que acompañan tu vida universitaria.</string>
-    <string name="login_subtitle">Administra tus reservas, revisa el menú y vive la experiencia del comedor en segundos.</string>
-    <string name="login_helper">Ingresa con tus credenciales del comedor y mantén tu lugar siempre asegurado.</string>
-    <string name="login_demo_hint">Demo: estudiante / comedor2024</string>
-    <string name="login_tagline">Energía solar para tus ideas y tu alimentación.</string>
-    <string name="login_subtitle">Gestiona tus reservas y mantente conectado con la experiencia gastronómica de la UNTELS.</string>
-    <string name="login_helper">Ingresa con las credenciales asignadas por el equipo del comedor.</string>
-    <string name="login_demo_hint">Demo: estudiante / energia2024</string>
-    <string name="login_user_hint">Usuario UNTELS</string>
+    <!-- Login -->
+    <string name="login_title">Bienvenido al comedor UNTELS</string>
+    <string name="login_subtitle">Gestiona tus reservas y revisa el menú diario en segundos.</string>
+    <string name="login_user_hint">Código de estudiante</string>
     <string name="login_password_hint">Contraseña</string>
     <string name="login_button">Ingresar</string>
+    <string name="login_demo_hint">Demo: 20210001 / comedor2024</string>
     <string name="login_error_required">Este campo es obligatorio</string>
-    <string name="login_error_invalid">Usuario o contraseña incorrectos</string>
+    <string name="login_error_invalid">Código o contraseña incorrectos</string>
 
-    <string name="login_feature_benefits">Beneficios principales</string>
-    <string name="login_feature_service">🍽️ Menú diario actualizado</string>
-    <string name="login_feature_reservas">⚡ Reservas express</string>
-    <string name="login_feature_bienestar">🤝 Comunidad UNTELS</string>
-    <string name="login_status_title">Servicio del día</string>
-    <string name="login_status_detail">Atención continua hasta las 19:00</string>
-    <string name="login_status_message">Revisa el menú de hoy y reserva tu turno sin colas.</string>
-    <string name="login_status_cta">Ver menú de hoy</string>
+    <!-- Navegación -->
+    <string name="nav_menu">Menú</string>
+    <string name="nav_reservas">Reservar</string>
+    <string name="nav_perfil">Perfil</string>
 
+    <!-- Pantalla de menú -->
+    <string name="menu_titulo">Menú de hoy</string>
+    <string name="menu_subtitulo">Descubre el plato destacado y revisa lo que habrá durante la semana.</string>
+    <string name="menu_btn_reservar">Reservar mi cupo</string>
+    <string name="menu_semana_titulo">Menú de la semana</string>
+    <string name="menu_calories">%1$d kcal</string>
+
+    <!-- Reservas -->
+    <string name="reservas_saludo">Hola, %1$s</string>
+    <string name="reservas_subtitulo">Selecciona un día y asegura tu lugar en el comedor.</string>
+    <string name="reservas_menu_detail">%1$s: %2$s</string>
+    <string name="reservas_entrada">Entrada</string>
+    <string name="reservas_postre">Postre</string>
+    <string name="reservas_bebida">Bebida</string>
+    <string name="reservas_estado_reservado">Reserva confirmada para este día.</string>
+    <string name="reservas_btn">Reservar cupo</string>
+    <string name="reservas_exito">Reserva registrada correctamente.</string>
+    <string name="reservas_ya_registrada">Ya tenías una reserva activa para este día.</string>
+    <string name="reservas_error">No se pudo registrar la reserva, inténtalo nuevamente.</string>
+
+    <!-- Perfil -->
+    <string name="perfil_codigo">Código: %1$s</string>
+    <string name="perfil_reserva_titulo">Última reserva</string>
+    <string name="perfil_ultima_reserva">Registrada el %1$s</string>
+    <string name="perfil_sin_sesion">Inicia sesión para ver tu perfil.</string>
     <string name="profile_logout">Cerrar sesión</string>
-    <string name="profile_logout_message">Tu sesión se cerró correctamente.</string>
 
-    <string name="hoy_experiencia_title">Experiencia UNTELS</string>
-    <string name="hoy_experiencia_subtitle">Consejos del equipo del comedor para aprovechar tu visita.</string>
-    <string name="hoy_experiencia_tip1">🕒 Llega 10 minutos antes</string>
-    <string name="hoy_experiencia_tip2">🧾 Lleva tu carné vigente</string>
-    <string name="hoy_experiencia_tip3">💬 Comparte sugerencias al chef</string>
-    <string name="hoy_experiencia_cta">Ver recomendaciones</string>
-    <string name="hoy_tag_favorito">🍛 Favorito del campus</string>
-    <string name="hoy_tag_equilibrado">🥗 Balanceado</string>
-    <string name="hoy_tag_casero">👩‍🍳 Receta casera</string>
-
-    <string name="semana_selector_title">Elige el día para explorar el menú</string>
-    <string name="semana_chip_lunes">Lun</string>
-    <string name="semana_chip_martes">Mar</string>
-    <string name="semana_chip_miercoles">Mié</string>
-    <string name="semana_chip_jueves">Jue</string>
-    <string name="semana_chip_viernes">Vie</string>
-    <string name="profile_logout">Cerrar sesión</string>
-    <string name="profile_logout_message">Tu sesión se cerró correctamente.</string>
+    <!-- Días -->
+    <string name="dia_lunes">Lunes</string>
+    <string name="dia_martes">Martes</string>
+    <string name="dia_miercoles">Miércoles</string>
+    <string name="dia_jueves">Jueves</string>
+    <string name="dia_viernes">Viernes</string>
 </resources>

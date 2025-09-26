@@ -3,20 +3,18 @@ package pe.edu.untels.comedor
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.widget.NestedScrollView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
 import pe.edu.untels.comedor.databinding.ActivityMainBinding
-import pe.edu.untels.comedor.ui.HoyFragment
+import pe.edu.untels.comedor.ui.MenuFragment
 import pe.edu.untels.comedor.ui.PerfilFragment
 import pe.edu.untels.comedor.ui.ReservasFragment
-import pe.edu.untels.comedor.ui.SemanaFragment
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), MenuFragment.MenuNavigation {
 
     private lateinit var binding: ActivityMainBinding
     private val fragments = mutableMapOf<Int, Fragment>()
-    private var currentItemId = R.id.nav_hoy
+    private var currentItemId = R.id.nav_menu
     private lateinit var sessionManager: SessionManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,22 +30,16 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         restoreFragments()
-        currentItemId = savedInstanceState?.getInt(KEY_SELECTED_ITEM) ?: R.id.nav_hoy
+        currentItemId = savedInstanceState?.getInt(KEY_SELECTED_ITEM) ?: R.id.nav_menu
 
-        // Fragment inicial
         showFragment(currentItemId)
         binding.bottomNav.selectedItemId = currentItemId
 
-        // Navegación inferior
         binding.bottomNav.setOnItemSelectedListener { item ->
             if (item.itemId != currentItemId) {
                 showFragment(item.itemId)
             }
             true
-        }
-
-        binding.bottomNav.setOnItemReselectedListener { item ->
-            fragments[item.itemId]?.view?.findViewById<NestedScrollView?>(R.id.scrollView)?.smoothScrollTo(0, 0)
         }
     }
 
@@ -59,10 +51,9 @@ class MainActivity : AppCompatActivity() {
     private fun showFragment(itemId: Int) {
         val fragment = fragments.getOrPut(itemId) {
             when (itemId) {
-                R.id.nav_semana -> SemanaFragment()
                 R.id.nav_reservas -> ReservasFragment()
                 R.id.nav_perfil -> PerfilFragment()
-                else -> HoyFragment()
+                else -> MenuFragment()
             }
         }
 
@@ -86,7 +77,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun restoreFragments() {
-        listOf(R.id.nav_hoy, R.id.nav_semana, R.id.nav_reservas, R.id.nav_perfil).forEach { itemId ->
+        listOf(R.id.nav_menu, R.id.nav_reservas, R.id.nav_perfil).forEach { itemId ->
             supportFragmentManager.findFragmentByTag(itemId.toString())?.let { fragment ->
                 fragments[itemId] = fragment
             }
@@ -98,6 +89,11 @@ class MainActivity : AppCompatActivity() {
             addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
         })
         finish()
+    }
+
+    override fun openReservations() {
+        binding.bottomNav.selectedItemId = R.id.nav_reservas
+        showFragment(R.id.nav_reservas)
     }
 
     companion object {
