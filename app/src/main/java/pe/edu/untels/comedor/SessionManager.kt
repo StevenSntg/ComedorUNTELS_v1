@@ -26,6 +26,21 @@ class SessionManager(context: Context) {
         UserCredential(
             username = "admin",
             password = "gestion123",
+            password = "energia2024",
+            displayName = "Valeria Mendoza",
+            program = "Ing. Ambiental · C0021345",
+            role = "Embajadora del menú saludable"
+        ),
+        UserCredential(
+            username = "nutri",
+            password = "sabores!",
+            displayName = "Equipo de Nutrición",
+            program = "Coordinación UNTELS",
+            role = "Diseño nutricional del comedor"
+        ),
+        UserCredential(
+            username = "admin",
+            password = "solardeli",
             displayName = "Gestión del Comedor",
             program = "Administración de Servicios",
             role = "Coordinación operativa"

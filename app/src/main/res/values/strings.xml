@@ -7,6 +7,10 @@
     <string name="login_subtitle">Administra tus reservas, revisa el menú y vive la experiencia del comedor en segundos.</string>
     <string name="login_helper">Ingresa con tus credenciales del comedor y mantén tu lugar siempre asegurado.</string>
     <string name="login_demo_hint">Demo: estudiante / comedor2024</string>
+    <string name="login_tagline">Energía solar para tus ideas y tu alimentación.</string>
+    <string name="login_subtitle">Gestiona tus reservas y mantente conectado con la experiencia gastronómica de la UNTELS.</string>
+    <string name="login_helper">Ingresa con las credenciales asignadas por el equipo del comedor.</string>
+    <string name="login_demo_hint">Demo: estudiante / energia2024</string>
     <string name="login_user_hint">Usuario UNTELS</string>
     <string name="login_password_hint">Contraseña</string>
     <string name="login_button">Ingresar</string>
@@ -41,4 +45,6 @@
     <string name="semana_chip_miercoles">Mié</string>
     <string name="semana_chip_jueves">Jue</string>
     <string name="semana_chip_viernes">Vie</string>
+    <string name="profile_logout">Cerrar sesión</string>
+    <string name="profile_logout_message">Tu sesión se cerró correctamente.</string>
 </resources>
