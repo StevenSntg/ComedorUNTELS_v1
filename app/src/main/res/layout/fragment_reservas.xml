@@ -1,662 +1,175 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/md_background"
-    tools:context=".ui.ReservasFragment">
+    android:background="@color/md_background">
 
-    <com.google.android.material.appbar.AppBarLayout
+    <LinearLayout
+        android:id="@+id/groupContent"
         android:layout_width="match_parent"
-        android:layout_height="240dp"
-        android:elevation="0dp"
-        android:stateListAnimator="@null">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:clipToPadding="false">
 
-        <FrameLayout
+        <TextView
+            android:id="@+id/tvSaludo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/md_on_surface"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:text="Hola, Valeria" />
+
+        <TextView
+            android:id="@+id/tvIndicacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="@string/reservas_subtitulo"
+            android:textColor="@color/md_on_surface_variant"
+            android:textSize="13sp" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroup"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:singleSelection="true">
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="centerCrop"
-                android:src="@drawable/bg_header_gradient" />
-
-            <com.google.android.material.appbar.MaterialToolbar
-                android:id="@+id/toolbarReservas"
-                android:layout_width="match_parent"
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipLunes"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:paddingTop="24dp"
-                android:paddingHorizontal="20dp"
-                app:menu="@menu/menu_hoy"
-                app:title="Chapa tu cupo!"
-                app:titleCentered="false"
-                app:titleTextColor="@android:color/white" />
+                android:text="@string/dia_lunes"
+                android:textAllCaps="false" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipMartes"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dia_martes"
+                android:textAllCaps="false" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipMiercoles"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dia_miercoles"
+                android:textAllCaps="false" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipJueves"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dia_jueves"
+                android:textAllCaps="false" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipViernes"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dia_viernes"
+                android:textAllCaps="false" />
+        </com.google.android.material.chip.ChipGroup>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:cardBackgroundColor="@color/md_surface"
+            app:cardCornerRadius="22dp"
+            app:cardElevation="6dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
                 android:orientation="vertical"
-                android:paddingHorizontal="24dp"
-                android:paddingBottom="32dp">
+                android:padding="20dp">
 
                 <TextView
-                    android:id="@+id/tvResumenReservas"
+                    android:id="@+id/tvDiaSeleccionado"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Separa tus cupos sin estrés"
-                    android:textColor="@android:color/white"
-                    android:textSize="26sp"
-                    android:textStyle="bold" />
+                    android:textColor="@color/md_primary"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:text="Lunes" />
 
                 <TextView
+                    android:id="@+id/tvMenuPrincipal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
-                    android:text="Activa recordatorios automáticos, y asegura tu cupo en el comedor."
-                    android:textColor="@android:color/white"
-                    android:textSize="15sp"
-                    android:alpha="0.9" />
+                    android:textColor="@color/md_on_surface"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:text="Seco de res con frijoles y arroz" />
 
-                <LinearLayout
+                <TextView
+                    android:id="@+id/tvMenuEntrada"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:background="@drawable/pill_transparent"
-                    android:gravity="center_vertical"
-                    android:paddingHorizontal="18dp"
-                    android:paddingVertical="8dp">
+                    android:layout_marginTop="12dp"
+                    android:textColor="@color/md_on_surface_variant"
+                    android:textSize="13sp"
+                    tools:text="Entrada: Crema de zapallo" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="🔔 Próximo aviso 10:30"
-                        android:textColor="@android:color/white"
-                        android:textSize="14sp" />
+                <TextView
+                    android:id="@+id/tvMenuPostre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/md_on_surface_variant"
+                    android:textSize="13sp"
+                    tools:text="Postre: Ensalada de frutas" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="12dp"
-                        android:text="⚙️ Automatización activa"
-                        android:textColor="@android:color/white"
-                        android:textSize="14sp" />
-                </LinearLayout>
+                <TextView
+                    android:id="@+id/tvMenuBebida"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/md_on_surface_variant"
+                    android:textSize="13sp"
+                    tools:text="Bebida: Emoliente de quinua" />
             </LinearLayout>
-        </FrameLayout>
-    </com.google.android.material.appbar.AppBarLayout>
+        </com.google.android.material.card.MaterialCardView>
 
-    <androidx.core.widget.NestedScrollView
-        android:id="@+id/scrollView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <TextView
+            android:id="@+id/tvEstadoReserva"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/md_tertiary"
+            android:textSize="13sp"
+            android:visibility="gone"
+            tools:text="Reserva confirmada"
+            tools:visibility="visible" />
 
-        <LinearLayout
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnReservar"
+            style="@style/Widget.Material3.Button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingHorizontal="16dp"
-            android:paddingTop="16dp"
-            android:paddingBottom="24dp">
-
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/cardProximaReserva"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:cardBackgroundColor="@color/md_surface"
-                app:cardCornerRadius="20dp"
-                app:cardElevation="6dp"
-                app:strokeColor="@color/md_outline">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="20dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Próxima apertura"
-                        android:textColor="@color/md_on_surface"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/tvHoraApertura"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:text="Hoy • 10:30 am"
-                        android:textColor="@color/md_on_surface_variant"
-                        android:textSize="14sp" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
-                        android:orientation="horizontal">
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Cupos habilitados"
-                                android:textColor="@color/md_on_surface_variant"
-                                android:textSize="12sp" />
-
-                            <TextView
-                                android:id="@+id/tvCupos"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="120"
-                                android:textColor="@color/md_primary"
-                                android:textSize="22sp"
-                                android:textStyle="bold" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Reservas confirmadas"
-                                android:textColor="@color/md_on_surface_variant"
-                                android:textSize="12sp" />
-
-                            <TextView
-                                android:id="@+id/tvReservasConfirmadas"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="78"
-                                android:textColor="@color/md_secondary"
-                                android:textSize="22sp"
-                                android:textStyle="bold" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Tiempo restante"
-                                android:textColor="@color/md_on_surface_variant"
-                                android:textSize="12sp" />
-
-                            <TextView
-                                android:id="@+id/tvCuentaRegresiva"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="00:12:45"
-                                android:textColor="@color/md_tertiary"
-                                android:textSize="22sp"
-                                android:textStyle="bold" />
-                        </LinearLayout>
-                    </LinearLayout>
-
-                    <com.google.android.material.progressindicator.LinearProgressIndicator
-                        android:id="@+id/progressOcupacion"
-                        style="@style/Widget.Material3.LinearProgressIndicator"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:max="100"
-                        android:progress="65"
-                        app:indicatorColor="@color/md_primary"
-                        app:trackColor="@color/md_outline" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:text="Quedan 42 cupos disponibles"
-                        android:textColor="@color/md_on_surface_variant"
-                        android:textSize="12sp" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal">
-
-                        <com.google.android.material.button.MaterialButton
-                            android:id="@+id/btnReservar"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Reservar cupo"
-                            android:textAllCaps="false"
-                            android:textSize="15sp"
-                            app:cornerRadius="16dp"
-                            app:icon="@drawable/ic_flash"
-                            app:iconTint="@color/md_on_primary" />
-
-                        <com.google.android.material.button.MaterialButton
-                            android:id="@+id/btnVerHistorial"
-                            style="@style/Widget.Material3.Button.OutlinedButton"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="12dp"
-                            android:layout_weight="1"
-                            android:text="Ver historial"
-                            android:textAllCaps="false"
-                            android:textSize="15sp"
-                            app:cornerRadius="16dp"
-                            app:strokeColor="@color/md_primary"
-                            app:icon="@drawable/ic_arrow_right"
-                            app:iconTint="@color/md_primary" />
-                    </LinearLayout>
-                </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:text="Próximas reservas"
-                android:textColor="@color/md_on_surface"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/cardLineaTiempo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                app:cardBackgroundColor="@color/md_surface"
-                app:cardCornerRadius="20dp"
-                app:cardElevation="6dp"
-                app:strokeColor="@color/md_outline">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:padding="20dp">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:gravity="top"
-                        android:orientation="vertical">
-
-                        <View
-                            android:layout_width="12dp"
-                            android:layout_height="12dp"
-                            android:background="@drawable/timeline_dot" />
-
-                        <View
-                            android:layout_width="2dp"
-                            android:layout_height="40dp"
-                            android:layout_gravity="center_horizontal"
-                            android:background="@drawable/timeline_line" />
-
-                        <View
-                            android:layout_width="12dp"
-                            android:layout_height="12dp"
-                            android:background="@drawable/timeline_dot" />
-
-                        <View
-                            android:layout_width="2dp"
-                            android:layout_height="40dp"
-                            android:layout_gravity="center_horizontal"
-                            android:background="@drawable/timeline_line" />
-
-                        <View
-                            android:layout_width="12dp"
-                            android:layout_height="12dp"
-                            android:background="@drawable/timeline_dot" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Lunes 18 · Almuerzo"
-                                android:textColor="@color/md_on_surface"
-                                android:textSize="15sp"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="2dp"
-                                android:text="Recoger entre 10:30 y 11:00"
-                                android:textColor="@color/md_on_surface_variant"
-                                android:textSize="13sp" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="6dp"
-                                android:background="@drawable/tag_background"
-                                android:paddingHorizontal="8dp"
-                                android:paddingVertical="4dp"
-                                android:text="Código QR listo"
-                                android:textColor="@color/md_on_surface"
-                                android:textSize="11sp"
-                                android:textStyle="bold" />
-                        </LinearLayout>
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:layout_marginVertical="16dp"
-                            android:background="@color/md_outline" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Martes 19 · Cena"
-                                android:textColor="@color/md_on_surface"
-                                android:textSize="15sp"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="2dp"
-                                android:text="En espera de confirmación · Se notificará a las 17:30"
-                                android:textColor="@color/md_on_surface_variant"
-                                android:textSize="13sp" />
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="6dp"
-                                android:background="@drawable/pill_background"
-                                android:gravity="center_vertical"
-                                android:paddingHorizontal="10dp"
-                                android:paddingVertical="6dp">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="⏳ Lista de espera"
-                                    android:textColor="@color/md_primary"
-                                    android:textSize="11sp"
-                                    android:textStyle="bold" />
-                            </LinearLayout>
-                        </LinearLayout>
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:layout_marginVertical="16dp"
-                            android:background="@color/md_outline" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Miércoles 20 · Almuerzo"
-                                android:textColor="@color/md_on_surface"
-                                android:textSize="15sp"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="2dp"
-                                android:text="Personaliza tu preferencia para mejorar tus opciones automáticas."
-                                android:textColor="@color/md_on_surface_variant"
-                                android:textSize="13sp" />
-
-                            <com.google.android.material.button.MaterialButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="8dp"
-                                android:text="Modificar selección"
-                                android:textAllCaps="false"
-                                android:textSize="12sp"
-                                style="@style/Widget.Material3.Button.TextButton"
-                                app:icon="@drawable/ic_arrow_right"
-                                app:iconTint="@color/md_primary" />
-                        </LinearLayout>
-                    </LinearLayout>
-                </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:text="Automatiza tu experiencia"
-                android:textColor="@color/md_on_surface"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/cardAutomatizacion"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                app:cardBackgroundColor="@color/md_surface"
-                app:cardCornerRadius="20dp"
-                app:cardElevation="6dp"
-                app:strokeColor="@color/md_outline">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="20dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal">
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Recordatorios inteligentes"
-                                android:textColor="@color/md_on_surface"
-                                android:textSize="16sp"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="4dp"
-                                android:text="Configura alertas según tu horario y tus prioridades nutricionales."
-                                android:textColor="@color/md_on_surface_variant"
-                                android:textSize="13sp" />
-                        </LinearLayout>
-
-                        <com.google.android.material.switchmaterial.SwitchMaterial
-                            android:id="@+id/switchAutoReserva"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:checked="true"
-                            android:text="" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:orientation="vertical">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center_vertical"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:text="Alertas prioritarias"
-                                android:textColor="@color/md_on_surface"
-                                android:textSize="14sp" />
-
-                            <com.google.android.material.switchmaterial.SwitchMaterial
-                                android:id="@+id/switchAlertas"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:checked="true"
-                                android:text="" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center_vertical"
-                            android:layout_marginTop="12dp"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:text="Sincronizar con calendario"
-                                android:textColor="@color/md_on_surface"
-                                android:textSize="14sp" />
-
-                            <com.google.android.material.switchmaterial.SwitchMaterial
-                                android:id="@+id/switchCalendario"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="" />
-                        </LinearLayout>
-                    </LinearLayout>
-
-                    <com.google.android.material.button.MaterialButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:text="Ver configuración avanzada"
-                        android:textAllCaps="false"
-                        android:textSize="13sp"
-                        style="@style/Widget.Material3.Button.TextButton"
-                        app:icon="@drawable/ic_arrow_right"
-                        app:iconTint="@color/md_primary" />
-                </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
-
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/cardRecomendaciones"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                app:cardBackgroundColor="@color/md_surface"
-                app:cardCornerRadius="20dp"
-                app:cardElevation="6dp"
-                app:strokeColor="@color/md_outline">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="20dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Recomendaciones para ti"
-                        android:textColor="@color/md_on_surface"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="6dp"
-                        android:text="El martes suele agotarse en 8 minutos. Anticípate y activa la reserva automática 5 minutos antes."
-                        android:textColor="@color/md_on_surface_variant"
-                        android:textSize="14sp"
-                        android:lineSpacingExtra="4dp" />
-
-                    <com.google.android.material.chip.ChipGroup
-                        android:id="@+id/chipsRecomendaciones"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        app:chipSpacingHorizontal="12dp"
-                        app:singleSelection="false">
-
-                        <com.google.android.material.chip.Chip
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="⏰ Reservar temprano"
-                            android:checkable="false"
-                            style="@style/Widget.Material3.Chip.Suggestion" />
-
-                        <com.google.android.material.chip.Chip
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="🤝 Compartir cupo"
-                            android:checkable="false"
-                            style="@style/Widget.Material3.Chip.Suggestion" />
-
-                        <com.google.android.material.chip.Chip
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="📱 QR listo"
-                            android:checkable="false"
-                            style="@style/Widget.Material3.Chip.Suggestion" />
-                    </com.google.android.material.chip.ChipGroup>
-
-                    <com.google.android.material.button.MaterialButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:text="Solicitar mentor nutricional"
-                        android:textAllCaps="false"
-                        android:textSize="13sp"
-                        app:cornerRadius="16dp"
-                        app:icon="@drawable/ic_arrow_right"
-                        app:iconTint="@color/md_primary" />
-                </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
-        </LinearLayout>
-    </androidx.core.widget.NestedScrollView>
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+            android:layout_marginTop="24dp"
+            android:backgroundTint="@color/md_primary"
+            android:text="@string/reservas_btn"
+            android:textAllCaps="false"
+            android:textColor="@color/md_on_primary"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/progressIndicator"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+</FrameLayout>

@@ -1,599 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/md_background"
-    tools:context=".ui.PerfilFragment">
+    android:background="@color/md_background">
 
-    <com.google.android.material.appbar.AppBarLayout
+    <LinearLayout
+        android:id="@+id/layoutContent"
         android:layout_width="match_parent"
-        android:layout_height="240dp"
-        android:elevation="0dp"
-        android:stateListAnimator="@null">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
 
-        <FrameLayout
+        <TextView
+            android:id="@+id/tvNombreUsuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/md_on_surface"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            tools:text="Valeria Mendoza" />
+
+        <TextView
+            android:id="@+id/tvCodigo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/md_on_surface_variant"
+            android:textSize="14sp"
+            tools:text="Código: 20210001" />
+
+        <TextView
+            android:id="@+id/tvCarrera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/md_on_surface_variant"
+            android:textSize="14sp"
+            tools:text="Ingeniería de Sistemas" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardReserva"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="centerCrop"
-                android:src="@drawable/bg_header_gradient" />
-
-            <com.google.android.material.appbar.MaterialToolbar
-                android:id="@+id/toolbarPerfil"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:paddingTop="24dp"
-                android:paddingHorizontal="20dp"
-                app:title="Mi perfil"
-                app:titleCentered="false"
-                app:titleTextColor="@android:color/white" />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:cardBackgroundColor="@color/md_surface"
+            app:cardCornerRadius="22dp"
+            app:cardElevation="6dp"
+            android:visibility="gone"
+            tools:visibility="visible">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:paddingHorizontal="24dp"
-                android:paddingBottom="24dp">
+                android:orientation="vertical"
+                android:padding="20dp">
 
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:id="@+id/imgAvatar"
-                    android:layout_width="88dp"
-                    android:layout_height="88dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/ic_account_circle"
-                    app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"
-                    app:strokeColor="@android:color/white"
-                    app:strokeWidth="2dp" />
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/tvNombreUsuario"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Usuario UNTELS"
-                        android:textColor="@android:color/white"
-                        android:textSize="22sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/tvCodigo"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:text="Programa académico"
-                        android:textColor="@android:color/white"
-                        android:textSize="13sp"
-                        android:alpha="0.85" />
-
-                    <TextView
-                        android:id="@+id/tvRol"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
-                        android:text="Rol gastronómico"
-                        android:textColor="@android:color/white"
-                        android:textSize="13sp"
-                        android:alpha="0.85" />
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
-                        android:background="@drawable/pill_transparent"
-                        android:gravity="center_vertical"
-                        android:paddingHorizontal="14dp"
-                        android:paddingVertical="6dp">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="🏅 24 reservas completadas"
-                            android:textColor="@android:color/white"
-                            android:textSize="12sp" />
-                    </LinearLayout>
-                </LinearLayout>
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnEditarPerfil"
-                    style="@style/Widget.Material3.Button.OutlinedButton"
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Editar"
-                    android:textAllCaps="false"
-                    android:textSize="13sp"
-                    android:textColor="@color/material_dynamic_primary100"
-                    app:cornerRadius="16dp"
-                    app:strokeColor="@android:color/white"
-                    app:strokeWidth="1dp"
-                    app:icon="@drawable/ic_arrow_right"
-                    app:iconTint="@android:color/white" />
+                    android:text="@string/perfil_reserva_titulo"
+                    android:textColor="@color/md_primary"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvUltimaReserva"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:textColor="@color/md_on_surface"
+                    android:textSize="14sp"
+                    tools:text="Última reserva: 10 dic 2024, 12:15 p. m." />
             </LinearLayout>
-        </FrameLayout>
-    </com.google.android.material.appbar.AppBarLayout>
+        </com.google.android.material.card.MaterialCardView>
 
-    <androidx.core.widget.NestedScrollView
-        android:id="@+id/scrollView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fillViewport="true"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
-
-        <LinearLayout
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCerrarSesion"
+            style="@style/Widget.Material3.Button.OutlinedButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingHorizontal="16dp"
-            android:paddingTop="16dp"
-            android:paddingBottom="32dp">
+            android:layout_marginTop="32dp"
+            android:text="@string/profile_logout"
+            android:textAllCaps="false" />
 
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/cardPerfilPrincipal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:cardBackgroundColor="@color/md_surface"
-                app:cardCornerRadius="22dp"
-                app:cardElevation="6dp"
-                app:strokeColor="@color/md_outline">
+    </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="20dp">
+    <LinearLayout
+        android:id="@+id/stateEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:visibility="gone"
+        tools:visibility="gone">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Identidad digital"
-                        android:textColor="@color/md_on_surface"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/perfil_sin_sesion"
+            android:textColor="@color/md_on_surface_variant"
+            android:textSize="14sp" />
+    </LinearLayout>
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:text="Controla tu acceso al comedor, verifica tu puntaje de puntualidad y personaliza tus datos de contacto."
-                        android:textColor="@color/md_on_surface_variant"
-                        android:textSize="13sp"
-                        android:lineSpacingExtra="4dp" />
-
-                    <com.google.android.material.divider.MaterialDivider
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_marginVertical="16dp"
-                        app:dividerColor="@color/md_outline" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Reservas activas"
-                                android:textColor="@color/md_on_surface_variant"
-                                android:textSize="12sp" />
-
-                            <TextView
-                                android:id="@+id/tvReservasActivas"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="2"
-                                android:textColor="@color/md_primary"
-                                android:textSize="24sp"
-                                android:textStyle="bold" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Puntualidad"
-                                android:textColor="@color/md_on_surface_variant"
-                                android:textSize="12sp" />
-
-                            <TextView
-                                android:id="@+id/tvPuntualidad"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="98%"
-                                android:textColor="@color/md_secondary"
-                                android:textSize="24sp"
-                                android:textStyle="bold" />
-                        </LinearLayout>
-                    </LinearLayout>
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/btnVerCredencial"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:text="Mostrar credencial QR"
-                        android:textAllCaps="false"
-                        android:textSize="14sp"
-                        app:cornerRadius="16dp"
-                        app:icon="@drawable/ic_arrow_right"
-                        app:iconTint="@color/md_primary" />
-                </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:text="Preferencias alimenticias"
-                android:textColor="@color/md_on_surface"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/cardPreferencias"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                app:cardBackgroundColor="@color/md_surface"
-                app:cardCornerRadius="20dp"
-                app:cardElevation="6dp"
-                app:strokeColor="@color/md_outline">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="20dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Selecciona tus favoritos"
-                        android:textColor="@color/md_on_surface"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:text="Estas preferencias ayudan a generar sugerencias personalizadas y a optimizar tus reservas."
-                        android:textColor="@color/md_on_surface_variant"
-                        android:textSize="13sp" />
-
-                    <com.google.android.material.chip.ChipGroup
-                        android:id="@+id/chipGroupPerfil"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        app:chipSpacingHorizontal="12dp"
-                        app:chipSpacingVertical="8dp"
-                        app:singleLine="false">
-
-                        <com.google.android.material.chip.Chip
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:checkable="true"
-                            android:text="🥗 Fresco y ligero"
-                            style="@style/Widget.Material3.Chip.Filter" />
-
-                        <com.google.android.material.chip.Chip
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:checkable="true"
-                            android:text="🍛 Tradicional"
-                            style="@style/Widget.Material3.Chip.Filter" />
-
-                        <com.google.android.material.chip.Chip
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:checkable="true"
-                            android:text="🌶️ Picante"
-                            style="@style/Widget.Material3.Chip.Filter" />
-
-                        <com.google.android.material.chip.Chip
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:checkable="true"
-                            android:text="🌱 Vegetariano"
-                            style="@style/Widget.Material3.Chip.Filter" />
-
-                        <com.google.android.material.chip.Chip
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:checkable="true"
-                            android:text="🍓 Postres dulces"
-                            style="@style/Widget.Material3.Chip.Filter" />
-                    </com.google.android.material.chip.ChipGroup>
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/btnGuardarPreferencias"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:text="Guardar cambios"
-                        android:textAllCaps="false"
-                        android:textSize="13sp"
-                        app:cornerRadius="16dp"
-                        app:icon="@drawable/ic_arrow_right"
-                        app:iconTint="@color/md_on_primary" />
-                </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:text="Logros y hábitos"
-                android:textColor="@color/md_on_surface"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/cardLogros"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                app:cardBackgroundColor="@color/md_surface"
-                app:cardCornerRadius="20dp"
-                app:cardElevation="6dp"
-                app:strokeColor="@color/md_outline">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="20dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:background="@drawable/impact_card"
-                            android:gravity="center"
-                            android:orientation="vertical"
-                            android:padding="16dp"
-                            android:layout_marginEnd="12dp">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="🎯"
-                                android:textSize="26sp" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Metas cumplidas"
-                                android:textColor="@color/md_tertiary"
-                                android:textSize="12sp"
-                                android:textStyle="bold"
-                                android:layout_marginTop="8dp" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="8 de 10"
-                                android:textColor="@color/md_on_tertiary_container"
-                                android:textSize="14sp"
-                                android:textStyle="bold"
-                                android:layout_marginTop="4dp" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:background="@drawable/impact_card"
-                            android:gravity="center"
-                            android:orientation="vertical"
-                            android:padding="16dp">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="💧"
-                                android:textSize="26sp" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Hidratación"
-                                android:textColor="@color/md_tertiary"
-                                android:textSize="12sp"
-                                android:textStyle="bold"
-                                android:layout_marginTop="8dp" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="5/7 días"
-                                android:textColor="@color/md_on_tertiary_container"
-                                android:textSize="14sp"
-                                android:textStyle="bold"
-                                android:layout_marginTop="4dp" />
-                        </LinearLayout>
-                    </LinearLayout>
-
-                    <com.google.android.material.divider.MaterialDivider
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_marginVertical="20dp"
-                        app:dividerColor="@color/md_outline" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Rutina recomendada"
-                            android:textColor="@color/md_on_surface"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="4dp"
-                            android:text="Asiste al comedor desde las 12:00 y completa tu reto de frutas de temporada."
-                            android:textColor="@color/md_on_surface_variant"
-                            android:textSize="13sp"
-                            android:lineSpacingExtra="4dp" />
-
-                        <com.google.android.material.button.MaterialButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="12dp"
-                            android:text="Ver plan personal"
-                            android:textAllCaps="false"
-                            android:textSize="12sp"
-                            style="@style/Widget.Material3.Button.TextButton"
-                            app:icon="@drawable/ic_arrow_right"
-                            app:iconTint="@color/md_primary" />
-                    </LinearLayout>
-                </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:text="Configuración personalizada"
-                android:textColor="@color/md_on_surface"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/cardConfiguracion"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                app:cardBackgroundColor="@color/md_surface"
-                app:cardCornerRadius="20dp"
-                app:cardElevation="6dp"
-                app:strokeColor="@color/md_outline">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="20dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Notificaciones de apertura"
-                            android:textColor="@color/md_on_surface"
-                            android:textSize="14sp" />
-
-                        <com.google.android.material.switchmaterial.SwitchMaterial
-                            android:id="@+id/switchNotificaciones"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:checked="true"
-                            android:text="" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Recomendaciones inteligentes"
-                            android:textColor="@color/md_on_surface"
-                            android:textSize="14sp" />
-
-                        <com.google.android.material.switchmaterial.SwitchMaterial
-                            android:id="@+id/switchRecomendaciones"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:checked="true"
-                            android:text="" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Sincronizar con pulsera saludable"
-                            android:textColor="@color/md_on_surface"
-                            android:textSize="14sp" />
-
-                        <com.google.android.material.switchmaterial.SwitchMaterial
-                            android:id="@+id/switchPulsera"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="" />
-                    </LinearLayout>
-                </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnCerrarSesion"
-                style="@style/Widget.Material3.Button.OutlinedButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="28dp"
-                android:text="@string/profile_logout"
-                android:textAllCaps="false"
-                android:textSize="15sp"
-                app:cornerRadius="20dp"
-                app:icon="@drawable/ic_logout"
-                app:iconTint="@color/md_primary"
-                app:strokeColor="@color/md_primary"
-                app:strokeWidth="1dp" />
-        </LinearLayout>
-    </androidx.core.widget.NestedScrollView>
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</FrameLayout>

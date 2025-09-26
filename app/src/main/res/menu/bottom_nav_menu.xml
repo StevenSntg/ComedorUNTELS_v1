@@ -1,21 +1,16 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/nav_hoy"
-        android:icon="@android:drawable/ic_menu_day"
-        android:title="Hoy" />
-
-    <item
-        android:id="@+id/nav_semana"
-        android:icon="@android:drawable/ic_menu_week"
-        android:title="Semana" />
+        android:id="@+id/nav_menu"
+        android:icon="@drawable/ic_sun_high"
+        android:title="@string/nav_menu" />
 
     <item
         android:id="@+id/nav_reservas"
-        android:icon="@android:drawable/ic_menu_agenda"
-        android:title="Reservas" />
+        android:icon="@drawable/ic_notifications"
+        android:title="@string/nav_reservas" />
 
     <item
         android:id="@+id/nav_perfil"
-        android:icon="@android:drawable/ic_menu_myplaces"
-        android:title="Perfil" />
+        android:icon="@drawable/ic_account_circle"
+        android:title="@string/nav_perfil" />
 </menu>
