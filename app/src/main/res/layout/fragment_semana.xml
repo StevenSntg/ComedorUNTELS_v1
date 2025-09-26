@@ -261,6 +261,67 @@
             </com.google.android.material.card.MaterialCardView>
 
             <TextView
+                android:id="@+id/tvSelectorSemana"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/semana_selector_title"
+                android:textColor="@color/md_on_surface"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroupSemana"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:chipSpacingHorizontal="12dp"
+                app:chipSpacingVertical="8dp"
+                app:singleSelection="true">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipLunes"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:text="@string/semana_chip_lunes"
+                    android:checked="true"
+                    app:chipBackgroundColor="@color/chip_selector"
+                    app:chipStrokeColor="@color/md_outline"
+                    app:chipStrokeWidth="1dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipMartes"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:text="@string/semana_chip_martes"
+                    app:chipBackgroundColor="@color/chip_selector"
+                    app:chipStrokeColor="@color/md_outline"
+                    app:chipStrokeWidth="1dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipMiercoles"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:text="@string/semana_chip_miercoles"
+                    app:chipBackgroundColor="@color/chip_selector"
+                    app:chipStrokeColor="@color/md_outline"
+                    app:chipStrokeWidth="1dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipJueves"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:text="@string/semana_chip_jueves"
+                    app:chipBackgroundColor="@color/chip_selector"
+                    app:chipStrokeColor="@color/md_outline"
+                    app:chipStrokeWidth="1dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipViernes"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:text="@string/semana_chip_viernes"
+                    app:chipBackgroundColor="@color/chip_selector"
+                    app:chipStrokeColor="@color/md_outline"
+                    app:chipStrokeWidth="1dp" />
+            </com.google.android.material.chip.ChipGroup>
+
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"

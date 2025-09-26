@@ -322,7 +322,7 @@
                                 android:layout_height="wrap_content"
                                 android:padding="8dp"
                                 android:background="@drawable/tag_background"
-                                android:text="🔥 Energético"
+                                android:text="@string/hoy_tag_favorito"
                                 android:textSize="12sp"
                                 android:textStyle="bold" />
 
@@ -333,7 +333,7 @@
                                 android:layout_marginStart="8dp"
                                 android:padding="8dp"
                                 android:background="@drawable/tag_background"
-                                android:text="🥩 Proteínas"
+                                android:text="@string/hoy_tag_equilibrado"
                                 android:textSize="12sp"
                                 android:textStyle="bold" />
 
@@ -344,7 +344,7 @@
                                 android:layout_marginStart="8dp"
                                 android:padding="8dp"
                                 android:background="@drawable/tag_background"
-                                android:text="🍚 Peruano"
+                                android:text="@string/hoy_tag_casero"
                                 android:textSize="12sp"
                                 android:textStyle="bold"
                                 android:visibility="gone" />
@@ -706,15 +706,124 @@
 
             <!-- Tarjeta de sostenibilidad mejorada -->
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/cardSostenibilidad"
+                android:id="@+id/cardExperiencia"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 app:cardBackgroundColor="@color/md_surface"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="8dp"
-                app:strokeWidth="0dp">
+                app:strokeColor="@color/md_outline_variant"
+                app:strokeWidth="1dp">
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/hoy_experiencia_title"
+                                android:textColor="@color/md_on_surface"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="@string/hoy_experiencia_subtitle"
+                                android:textColor="@color/md_on_surface_variant"
+                                android:textSize="13sp"
+                                android:lineSpacingExtra="2dp" />
+                        </LinearLayout>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnTips"
+                            style="@style/Widget.Material3.Button.OutlinedButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/hoy_experiencia_cta"
+                            android:textAllCaps="false"
+                            android:textSize="12sp"
+                            app:cornerRadius="16dp"
+                            app:icon="@drawable/ic_arrow_right"
+                            app:iconTint="@color/md_primary"
+                            app:strokeColor="@color/md_primary"
+                            app:strokeWidth="1dp" />
+                    </LinearLayout>
+
+                    <com.google.android.material.divider.MaterialDivider
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginVertical="16dp"
+                        app:dividerColor="@color/md_outline" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/tag_background"
+                            android:padding="12dp"
+                            android:text="@string/hoy_experiencia_tip1"
+                            android:textAlignment="center"
+                            android:textColor="@color/md_on_surface"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <Space
+                            android:layout_width="12dp"
+                            android:layout_height="1dp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/tag_background"
+                            android:padding="12dp"
+                            android:text="@string/hoy_experiencia_tip2"
+                            android:textAlignment="center"
+                            android:textColor="@color/md_on_surface"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <Space
+                            android:layout_width="12dp"
+                            android:layout_height="1dp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/tag_background"
+                            android:padding="12dp"
+                            android:text="@string/hoy_experiencia_tip3"
+                            android:textAlignment="center"
+                            android:textColor="@color/md_on_surface"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
 
             </com.google.android.material.card.MaterialCardView>
 

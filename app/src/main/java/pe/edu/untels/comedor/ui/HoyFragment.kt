@@ -239,11 +239,11 @@ class HoyFragment : Fragment() {
         binding.cardReserva.alpha = 0f
         binding.cardReserva.translationY = 100f
 
-        binding.cardSostenibilidad.alpha = 0f
-        binding.cardSostenibilidad.translationY = 150f
+        binding.cardExperiencia.alpha = 0f
+        binding.cardExperiencia.translationY = 150f
 
         // Animar entrada escalonada
-        listOf(binding.cardPrincipal, binding.cardReserva, binding.cardSostenibilidad)
+        listOf(binding.cardPrincipal, binding.cardReserva, binding.cardExperiencia)
             .forEachIndexed { index, card ->
                 card.animate()
                     .alpha(1f)

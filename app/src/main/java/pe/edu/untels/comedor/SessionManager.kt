@@ -11,6 +11,21 @@ class SessionManager(context: Context) {
     private val demoUsers = listOf(
         UserCredential(
             username = "estudiante",
+            password = "comedor2024",
+            displayName = "Valeria Mendoza",
+            program = "Ing. de Sistemas · C0021345",
+            role = "Fanática del menú criollo"
+        ),
+        UserCredential(
+            username = "nutri",
+            password = "nutricion+",
+            displayName = "Equipo de Nutrición",
+            program = "Bienestar Estudiantil UNTELS",
+            role = "Guía nutricional del comedor"
+        ),
+        UserCredential(
+            username = "admin",
+            password = "gestion123",
             password = "energia2024",
             displayName = "Valeria Mendoza",
             program = "Ing. Ambiental · C0021345",
